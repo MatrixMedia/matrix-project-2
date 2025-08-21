@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "./abstracts/theme.module";
+
+:root {
+  @include printVariables();
+  /* color start */
+  --black: #000000;
+  --white: #ffffff;
+  --green: #0DD395;
+
+
+
+
+  /* color end */
+
+  /* font size start */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --text-xxl: 24px;
+  /* font size end */
+
+  /* font family start */
+  --primary-font: "Montserrat", sans-serif;
+  /* font family end */
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--bodyFontColor);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--black) !important;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#__next {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.5;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--green) transparent;
+  scroll-behavior: auto;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--blue-vl);
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  border: 3px solid var(--blue);
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+
+:-webkit-input-placeholder {
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  opacity: 1;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.full-container {
+  max-width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @media (max-width: 900px) {
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+  }
+
+}
+
+/* select drop start */
+.MuiMenu-paper {
+  background-color: var(--black) !important;
+  color: var(--white) !important;
+  opacity: 1 !important;
+
+
+  em {
+    font-style: normal;
+  }
+
+}
+
+.MuiMenuItem-root:hover {
+  background-color: var(--green) !important;
+  color: var(--white) !important;
+}
+
+.MuiInputBase-root:hover .MuiOutlinedInput-notchedOutline,
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  box-shadow: none;
+  outline: none;
+  border: 0;
+
+}
+
+/* select drop end */

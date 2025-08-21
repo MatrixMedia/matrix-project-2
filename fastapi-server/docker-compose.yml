@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  fastapi-app:
+    build: .
+    container_name: fastapi-ai-prod
+    ports:
+      - "8002:8000"
+    env_file:
+      - .env
+    restart: always
+    volumes:
+      - .:/app
+    networks:
+      - my_custom_network
+
+networks:
+  my_custom_network:
+    driver: bridge
